@@ -1,0 +1,45 @@
+{
+  "name": "portal-sol-pay-package",
+  "version": "1.0.21",
+  "description": "A package that exports PayContext and PortalProvider",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "files": [
+    "dist/cjs",
+    "dist/esm",
+    "public"
+  ],
+  "scripts": {
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build:esm": "tsc --project tsconfig.esm.json",
+    "build": "npm run build:cjs && npm run build:esm",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^5.16.6",
+    "@mui/material": "^5.16.6",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.18",
+    "@portal-hq/web": "^3.2.0",
+    "@solana/pay": "^0.2.5",
+    "@solana/web3.js": "^1.95.3",
+    "@yudiel/react-qr-scanner": "^2.0.8",
+    "bignumber.js": "^9.1.2",
+    "next": "^14.2.8",
+    "react": "^18",
+    "react-dom": "^18",
+    "styled-components": "^6.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.2"
+  }
+}

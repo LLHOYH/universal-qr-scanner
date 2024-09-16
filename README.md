@@ -62,7 +62,7 @@ import { PortalProvider, PayProvider } from 'universal-qr-scanner';
     </PortalProvider>
 ```
 
-On your page, import the Scanner UI provided, you are all set to use payment functions in your wallet!
+On your page, import the PayUI Component, you are now all set to use payment functions in your wallet!
 ```
 import { usePay, PayUI } from 'universal-qr-scanner';
 import React from 'react';

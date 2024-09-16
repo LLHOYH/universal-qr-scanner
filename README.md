@@ -1,6 +1,6 @@
-# Portal-Sol-Pay-Package
+# Universal QR Scanner
 
-This project is a npm package that provides React Components and Contexts for Solana Chain QR Payment services, that is built on top of Portal wallet and other service partners.
+This project is a npm package that provides React components and contexts for Solana chain QR payment services, that is built on top of Portal wallet and other service partners.
 
 NPM:
 ```
@@ -9,10 +9,9 @@ yarn add portal-sol-pay-package
 ```
 
 We provide a QR scanner for you to integrate into your wallet, that helps your wallet do payment and transfer:
-- via solana pay
-- to real life merchant
-- to solana Address
-
+- to Solana address
+- via Solana Pay
+- to fiat-accepting account
 
 # Tech
 Supports Next.js

@@ -17,6 +17,6 @@
     "declaration": true,
     "outDir": "dist"
   },
-  "include": ["*.tsx", "*.ts", "index.js"],
+  "include": ["*.tsx", "*.ts", "index.js", "providers/PayContext.tsx", "providers/portal.tsx"],
   "exclude": ["node_modules", "dist"]
 }

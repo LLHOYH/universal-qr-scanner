@@ -13,6 +13,7 @@ import { Cancel, Home, Send } from '@mui/icons-material';
 import React from 'react';
 import { PaymentUIState } from '../PayContext';
 import { Scanner } from '@yudiel/react-qr-scanner';
+import Link from 'next/link';
 
 function QRScanner({ decode }: { decode?: (rawQRData: string) => void }) {
   // @ts-expect-error unsure what type is expected
@@ -114,12 +115,12 @@ function PayThroughSolana_Pay({ payCrypto }: { payCrypto: PaymentUIState }) {
             <Typography variant="h6" gutterBottom>
               Transaction Hash:
             </Typography>
-            <Typography
-              variant="body1"
-              style={{ wordBreak: 'break-all', overflowWrap: 'break-word' }}
-            >
-              {payCrypto.hash}
-            </Typography>
+            <Link
+                  href={`https://solscan.io/tx/${payCrypto.hash}`}
+                  target='_blank'
+                  >
+                    {payCrypto.hash}
+                  </Link>
           </Grid>
         )}
 
@@ -251,12 +252,12 @@ function PayThroughSolanaTransfer({
               <Typography variant="h6" gutterBottom>
                 Transaction Hash:
               </Typography>
-              <Typography
-                variant="body1"
-                style={{ wordBreak: 'break-all', overflowWrap: 'break-word' }}
-              >
-                {payCrypto.hash}
-              </Typography>
+              <Link
+                  href={`https://solscan.io/tx/${payCrypto.hash}`}
+                  target='_blank'
+                  >
+                    {payCrypto.hash}
+                  </Link>
             </Grid>
           )}
 
@@ -449,15 +450,12 @@ function PayThroughRipeFiat({ payCrypto }: { payCrypto: PaymentUIState }) {
                   <Typography variant="h6" gutterBottom>
                     Transaction Hash:
                   </Typography>
-                  <Typography
-                    variant="body1"
-                    style={{
-                      wordBreak: 'break-all',
-                      overflowWrap: 'break-word',
-                    }}
+                  <Link
+                  href={`https://solscan.io/tx/${payCrypto.hash}`}
+                  target='_blank'
                   >
                     {payCrypto.hash}
-                  </Typography>
+                  </Link>
                 </Grid>
               )}
 

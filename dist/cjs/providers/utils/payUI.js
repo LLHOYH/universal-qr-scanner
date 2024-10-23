@@ -49,6 +49,7 @@ var material_1 = require("@mui/material");
 var icons_material_1 = require("@mui/icons-material");
 var react_1 = __importDefault(require("react"));
 var react_qr_scanner_1 = require("@yudiel/react-qr-scanner");
+var link_1 = __importDefault(require("next/link"));
 function QRScanner(_a) {
     var decode = _a.decode;
     // @ts-expect-error unsure what type is expected
@@ -98,7 +99,7 @@ function PayThroughSolana_Pay(_a) {
                 react_1.default.createElement(material_1.Typography, { variant: "body1", style: { wordBreak: 'break-all', overflowWrap: 'break-word' } }, payCrypto.memo || 'No memo provided')),
             payCrypto.hash && (react_1.default.createElement(material_1.Grid, { item: true, xs: 12 },
                 react_1.default.createElement(material_1.Typography, { variant: "h6", gutterBottom: true }, "Transaction Hash:"),
-                react_1.default.createElement(material_1.Typography, { variant: "body1", style: { wordBreak: 'break-all', overflowWrap: 'break-word' } }, payCrypto.hash))),
+                react_1.default.createElement(link_1.default, { href: "https://solscan.io/tx/".concat(payCrypto.hash), target: '_blank' }, payCrypto.hash))),
             react_1.default.createElement(material_1.Grid, { item: true, xs: 12 },
                 react_1.default.createElement(material_1.Box, { display: "flex", gap: 2 },
                     !payCrypto.hash && (react_1.default.createElement(material_1.Button, { color: "inherit", variant: "contained", onClick: function () { return __awaiter(_this, void 0, void 0, function () {
@@ -157,7 +158,7 @@ function PayThroughSolanaTransfer(_a) {
                         } })),
                 payCrypto.hash && (react_1.default.createElement(material_1.Grid, { item: true, xs: 12 },
                     react_1.default.createElement(material_1.Typography, { variant: "h6", gutterBottom: true }, "Transaction Hash:"),
-                    react_1.default.createElement(material_1.Typography, { variant: "body1", style: { wordBreak: 'break-all', overflowWrap: 'break-word' } }, payCrypto.hash))),
+                    react_1.default.createElement(link_1.default, { href: "https://solscan.io/tx/".concat(payCrypto.hash), target: '_blank' }, payCrypto.hash))),
                 react_1.default.createElement(material_1.Grid, { item: true, xs: 12 },
                     react_1.default.createElement(material_1.Box, { display: "flex", gap: 2 },
                         !payCrypto.hash && (react_1.default.createElement(material_1.Button, { color: "inherit", variant: "contained", onClick: function () { return __awaiter(_this, void 0, void 0, function () {
@@ -244,10 +245,7 @@ function PayThroughRipeFiat(_a) {
                         } })),
                 payCrypto.hash && (react_1.default.createElement(material_1.Grid, { item: true, xs: 12 },
                     react_1.default.createElement(material_1.Typography, { variant: "h6", gutterBottom: true }, "Transaction Hash:"),
-                    react_1.default.createElement(material_1.Typography, { variant: "body1", style: {
-                            wordBreak: 'break-all',
-                            overflowWrap: 'break-word',
-                        } }, payCrypto.hash))),
+                    react_1.default.createElement(link_1.default, { href: "https://solscan.io/tx/".concat(payCrypto.hash), target: '_blank' }, payCrypto.hash))),
                 react_1.default.createElement(material_1.Grid, { item: true, xs: 12 },
                     react_1.default.createElement(material_1.Box, { display: "flex", gap: 2 },
                         !payCrypto.hash && (react_1.default.createElement(material_1.Button, { color: "inherit", variant: "contained", onClick: function () { return __awaiter(_this, void 0, void 0, function () {

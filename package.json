@@ -1,6 +1,6 @@
 {
   "name": "universal-qr-scanner",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Provides a QR scanner that supports paying to fiat account from web3 wallet",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

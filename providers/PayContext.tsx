@@ -222,6 +222,7 @@ function PayProvider({ children }: { children: React.ReactNode }) {
             to: payParams?.recipient.toString(),
             tokenAmount: Number(payParams?.amount),
             tokenAddress: payParams?.splToken?.toString() || '',
+            memo:payParams?.memo?.toString() || '',
             payType: 'SOLANA_PAY',
           },
         });

@@ -177,7 +177,7 @@ function PayThroughSolanaTransfer(_a) {
 function PayThroughRipeFiat(_a) {
     var _this = this;
     var payCrypto = _a.payCrypto;
-    var SGD_USD_CONVERSION = 0.77;
+    var SGD_USD_CONVERSION = 0.756;
     return (react_1.default.createElement("div", null,
         react_1.default.createElement(material_1.Box, { sx: { p: 3, background: 'white', borderRadius: '20px' } },
             react_1.default.createElement(material_1.Typography, { variant: "h5", gutterBottom: true }, "Pay Fiat Using Ripe"),
@@ -205,7 +205,7 @@ function PayThroughRipeFiat(_a) {
                         payCrypto.tokenAddress,
                         ")")),
                 react_1.default.createElement(material_1.Grid, { item: true, xs: 6, marginTop: '10px' },
-                    react_1.default.createElement(material_1.TextField, { label: "Fiat Amount (SGD)", variant: "outlined", fullWidth: true, type: "number", name: "fiatAmount", value: payCrypto.fiatAmount, onChange: function (e) {
+                    react_1.default.createElement(material_1.TextField, { label: "Fiat Amount (SGD)", variant: "outlined", fullWidth: true, name: "fiatAmount", value: payCrypto.fiatAmount, onChange: function (e) {
                             return payCrypto.updateFields &&
                                 payCrypto.updateFields({
                                     fiatAmount: Number(e.target.value || 0),

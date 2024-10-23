@@ -192,8 +192,8 @@ function PayProvider(_a) {
     function decode(rawQRData) {
         return __awaiter(this, void 0, void 0, function () {
             var payParams, _a, uen, phoneNumber, netsAccount;
-            var _b;
-            return __generator(this, function (_c) {
+            var _b, _c;
+            return __generator(this, function (_d) {
                 //if it is a solana pay qrcode
                 if (rawQRData.substring(0, 7) === 'solana:') {
                     try {
@@ -202,7 +202,7 @@ function PayProvider(_a) {
                             return [2 /*return*/];
                         dispatch({
                             type: 'decode',
-                            payload: __assign(__assign({}, state), { to: payParams === null || payParams === void 0 ? void 0 : payParams.recipient.toString(), tokenAmount: Number(payParams === null || payParams === void 0 ? void 0 : payParams.amount), tokenAddress: ((_b = payParams === null || payParams === void 0 ? void 0 : payParams.splToken) === null || _b === void 0 ? void 0 : _b.toString()) || '', payType: 'SOLANA_PAY' }),
+                            payload: __assign(__assign({}, state), { to: payParams === null || payParams === void 0 ? void 0 : payParams.recipient.toString(), tokenAmount: Number(payParams === null || payParams === void 0 ? void 0 : payParams.amount), tokenAddress: ((_b = payParams === null || payParams === void 0 ? void 0 : payParams.splToken) === null || _b === void 0 ? void 0 : _b.toString()) || '', memo: ((_c = payParams === null || payParams === void 0 ? void 0 : payParams.memo) === null || _c === void 0 ? void 0 : _c.toString()) || '', payType: 'SOLANA_PAY' }),
                         });
                     }
                     catch (error) {

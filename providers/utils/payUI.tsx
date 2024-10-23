@@ -299,7 +299,7 @@ function PayThroughSolanaTransfer({
 }
 
 function PayThroughRipeFiat({ payCrypto }: { payCrypto: PaymentUIState }) {
-  const SGD_USD_CONVERSION = 0.77;
+  const SGD_USD_CONVERSION = 0.756;
 
   return (
     <div>
@@ -378,7 +378,6 @@ function PayThroughRipeFiat({ payCrypto }: { payCrypto: PaymentUIState }) {
                   label="Fiat Amount (SGD)"
                   variant="outlined"
                   fullWidth
-                  type="number"
                   name="fiatAmount"
                   value={payCrypto.fiatAmount}
                   onChange={(e) =>
